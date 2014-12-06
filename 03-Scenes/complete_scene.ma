@@ -1,11 +1,15 @@
 //Maya ASCII 2014 scene
 //Name: complete_scene.ma
-//Last modified: Sat, Dec 06, 2014 08:38:26 PM
+//Last modified: Sat, Dec 06, 2014 08:48:12 PM
 //Codeset: 1252
 file -rdi 1 -ns "town" -rfn "townRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/town.mb";
 file -rdi 1 -ns "man_orange" -rfn "man_orangeRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/man_orange.mb";
+file -rdi 1 -ns "car" -rfn "carRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/car.mb";
+file -rdi 1 -ns "car2" -rfn "car2RN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/car2.mb";
 file -r -ns "town" -dr 1 -rfn "townRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/town.mb";
 file -r -ns "man_orange" -dr 1 -rfn "man_orangeRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/man_orange.mb";
+file -r -ns "car" -dr 1 -rfn "carRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/car.mb";
+file -r -ns "car2" -dr 1 -rfn "car2RN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/car2.mb";
 requires maya "2014";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeType "mentalrayRenderPass"
 		 -nodeType "mentalrayUserBuffer" -nodeType "mentalraySubdivApprox" -nodeType "mentalrayCurveApprox"
@@ -94,16 +98,16 @@ fileInfo "osv" "Microsoft Windows 7 Home Premium Edition, 64-bit Windows 7 Servi
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 18.450805648228794 2.3395790189464551 -8.9470842981420979 ;
-	setAttr ".r" -type "double3" 176.06164727039607 86.199999999999804 -179.9999999999996 ;
+	setAttr ".t" -type "double3" 27.565152233687996 19.850668583089149 -5.0082598509134009 ;
+	setAttr ".r" -type "double3" 150.26164727039315 82.599999999997436 -179.99999999999974 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 17.634919324337226;
+	setAttr ".coi" 38.146139531549636;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 0.93735939264297485 1.3364482561351601 -7.7394144794863671 ;
+	setAttr ".tp" -type "double3" -5.2812580022231286 0.9286574087308177 -0.74225599576418921 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
@@ -147,8 +151,8 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 15 ".lnk";
-	setAttr -s 15 ".slnk";
+	setAttr -s 57 ".lnk";
+	setAttr -s 57 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -429,27 +433,45 @@ createNode mentalrayOptions -s -n "PreviewImrRayTracyOn";
 	setAttr ".rfrr" 2;
 	setAttr ".maxr" 3;
 	setAttr ".shrd" 1;
+createNode reference -n "carRN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"carRN"
+		"carRN" 0
+		"carRN" 2
+		2 "|car:complete" "translate" " -type \"double3\" 0 0 -7.997168"
+		2 "|car:complete" "scale" " -type \"double3\" 0.403743 0.403743 0.403743";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "car2RN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"car2RN"
+		"car2RN" 0
+		"car2RN" 2
+		2 "|car2:complete" "translate" " -type \"double3\" 0 0 -11.916989"
+		2 "|car2:complete" "scale" " -type \"double3\" 0.411387 0.411387 0.411387";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 15 ".st";
+	setAttr -s 57 ".st";
 select -ne :initialShadingGroup;
-	setAttr -s 6 ".dsm";
+	setAttr -s 16 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 6 ".gn";
+	setAttr -s 16 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultShaderList1;
-	setAttr -s 15 ".s";
+	setAttr -s 47 ".s";
 select -ne :defaultTextureList1;
-	setAttr -s 3 ".tx";
+	setAttr -s 9 ".tx";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 2 ".u";
+	setAttr -s 8 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 3 ".r";
+	setAttr -s 5 ".r";
 select -ne :renderGlobalsList1;
 select -ne :defaultRenderGlobals;
 	setAttr ".ren" -type "string" "mentalRay";
