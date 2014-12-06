@@ -1,15 +1,27 @@
 //Maya ASCII 2014 scene
 //Name: complete_scene.ma
-//Last modified: Sat, Dec 06, 2014 08:48:12 PM
+//Last modified: Sat, Dec 06, 2014 09:18:56 PM
 //Codeset: 1252
 file -rdi 1 -ns "town" -rfn "townRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/town.mb";
 file -rdi 1 -ns "man_orange" -rfn "man_orangeRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/man_orange.mb";
 file -rdi 1 -ns "car" -rfn "carRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/car.mb";
 file -rdi 1 -ns "car2" -rfn "car2RN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/car2.mb";
+file -rdi 1 -ns "police_blue" -rfn "police_blueRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/police_blue.mb";
+file -rdi 1 -ns "police_red" -rfn "police_redRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/police_red.mb";
+file -rdi 1 -ns "tank" -rfn "tankRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/tank.mb";
+file -rdi 1 -ns "woman" -rfn "womanRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/woman.mb";
+file -rdi 1 -ns "man_green" -rfn "man_greenRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/man_green.mb";
+file -rdi 1 -ns "plane" -rfn "planeRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/plane.mb";
 file -r -ns "town" -dr 1 -rfn "townRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/town.mb";
 file -r -ns "man_orange" -dr 1 -rfn "man_orangeRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/man_orange.mb";
 file -r -ns "car" -dr 1 -rfn "carRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/car.mb";
 file -r -ns "car2" -dr 1 -rfn "car2RN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/car2.mb";
+file -r -ns "police_blue" -dr 1 -rfn "police_blueRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/police_blue.mb";
+file -r -ns "police_red" -dr 1 -rfn "police_redRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/police_red.mb";
+file -r -ns "tank" -dr 1 -rfn "tankRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/tank.mb";
+file -r -ns "woman" -dr 1 -rfn "womanRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/woman.mb";
+file -r -ns "man_green" -dr 1 -rfn "man_greenRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/man_green.mb";
+file -r -ns "plane" -dr 1 -rfn "planeRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/plane.mb";
 requires maya "2014";
 requires -nodeType "mentalrayFramebuffer" -nodeType "mentalrayOutputPass" -nodeType "mentalrayRenderPass"
 		 -nodeType "mentalrayUserBuffer" -nodeType "mentalraySubdivApprox" -nodeType "mentalrayCurveApprox"
@@ -98,26 +110,28 @@ fileInfo "osv" "Microsoft Windows 7 Home Premium Edition, 64-bit Windows 7 Servi
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 27.565152233687996 19.850668583089149 -5.0082598509134009 ;
-	setAttr ".r" -type "double3" 150.26164727039315 82.599999999997436 -179.99999999999974 ;
+	setAttr ".t" -type "double3" -3.8053493844574469 22.868952140743197 -0.84384055590164575 ;
+	setAttr ".r" -type "double3" -28.199999999996415 113.19999999999969 0 ;
+	setAttr ".rp" -type "double3" 0 0 -2.2204460492503131e-016 ;
+	setAttr ".rpt" -type "double3" 2.21077453077387e-015 2.5736231758665261e-016 1.9807186244145475e-015 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
-	setAttr ".fl" 34.999999999999986;
-	setAttr ".coi" 38.146139531549636;
+	setAttr ".fl" 34.999999999999979;
+	setAttr ".coi" 44.624247871765704;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -5.2812580022231286 0.9286574087308177 -0.74225599576418921 ;
+	setAttr ".tp" -type "double3" -40.953759690712069 7.7355688008721071 11.837254622697873 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 100.1 0 ;
+	setAttr ".t" -type "double3" -38.094533207878456 106.38754831486318 10.654865987969533 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 31.569266533275584;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -125,12 +139,12 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 createNode transform -s -n "front";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 0 0 100.1 ;
+	setAttr ".t" -type "double3" -37.877548945308668 0.73817688226699829 109.02313378271705 ;
 createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 15.170338345145574;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -138,21 +152,21 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 100.1 0 0 ;
+	setAttr ".t" -type "double3" 102.65435791874066 3.6166038967024128 13.008798582738091 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 30;
+	setAttr ".ow" 1.4156583868237091;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 createNode lightLinker -s -n "lightLinker1";
-	setAttr -s 57 ".lnk";
-	setAttr -s 57 ".slnk";
+	setAttr -s 92 ".lnk";
+	setAttr -s 92 ".slnk";
 createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 createNode renderLayerManager -n "renderLayerManager";
@@ -410,10 +424,13 @@ createNode reference -n "man_orangeRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"man_orangeRN"
 		"man_orangeRN" 0
-		"man_orangeRN" 2
-		2 "|man_orange:complete" "translate" " -type \"double3\" 0 -0.101376 -7.76691"
+		"man_orangeRN" 4
+		2 "|man_orange:complete" "translate" " -type \"double3\" -33.86903 0.0552411 18.855739"
 		
-		2 "|man_orange:lieder" "translate" " -type \"double3\" 0 -0.101376 -7.76691";
+		2 "|man_orange:complete" "rotate" " -type \"double3\" 0 241.967832 0"
+		2 "|man_orange:lieder" "translate" " -type \"double3\" -33.86903 0.0552411 18.855739"
+		
+		2 "|man_orange:lieder" "rotate" " -type \"double3\" 0 241.967832 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode mentalrayOptions -s -n "PreviewImrRayTracyOff";
@@ -437,8 +454,10 @@ createNode reference -n "carRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"carRN"
 		"carRN" 0
-		"carRN" 2
-		2 "|car:complete" "translate" " -type \"double3\" 0 0 -7.997168"
+		"carRN" 3
+		2 "|car:complete" "translate" " -type \"double3\" -27.521401 0.423556 17.25754"
+		
+		2 "|car:complete" "rotate" " -type \"double3\" 0 -36.227856 0"
 		2 "|car:complete" "scale" " -type \"double3\" 0.403743 0.403743 0.403743";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
@@ -446,32 +465,93 @@ createNode reference -n "car2RN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"car2RN"
 		"car2RN" 0
-		"car2RN" 2
-		2 "|car2:complete" "translate" " -type \"double3\" 0 0 -11.916989"
+		"car2RN" 3
+		2 "|car2:complete" "translate" " -type \"double3\" -24.175126 0.423556 13.198031"
+		
+		2 "|car2:complete" "rotate" " -type \"double3\" 0 -35.332237 0"
 		2 "|car2:complete" "scale" " -type \"double3\" 0.411387 0.411387 0.411387";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "police_blueRN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"police_blueRN"
+		"police_blueRN" 0
+		"police_blueRN" 2
+		2 "|police_blue:complete" "translate" " -type \"double3\" -36.630613 1.113751 24.88633"
+		
+		2 "|police_blue:complete" "rotate" " -type \"double3\" 0 -119.405563 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "police_redRN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"police_redRN"
+		"police_redRN" 0
+		"police_redRN" 2
+		2 "|police_red:complete" "translate" " -type \"double3\" -39.747168 1.114 16.575567"
+		
+		2 "|police_red:complete" "rotate" " -type \"double3\" 0 109.244882 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "tankRN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"tankRN"
+		"tankRN" 0
+		"tankRN" 4
+		2 "|tank:ball" "translate" " -type \"double3\" -39.768657 4.144796 13.008799"
+		
+		2 "|tank:ball" "rotate" " -type \"double3\" 0 0 0"
+		2 "|tank:complete" "translate" " -type \"double3\" -34.88923 0.528192 6.171471"
+		
+		2 "|tank:complete" "rotate" " -type \"double3\" 0 52.936703 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "womanRN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"womanRN"
+		"womanRN" 0
+		"womanRN" 1
+		2 "|woman:complete" "translate" " -type \"double3\" -34.947658 0.059503 21.459704";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "man_greenRN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"man_greenRN"
+		"man_greenRN" 0
+		"man_greenRN" 2
+		2 "|man_green:complete" "translate" " -type \"double3\" -34.418089 0.0541284 19.939461"
+		
+		2 "|man_green:complete" "rotate" " -type \"double3\" 0 -120.064294 0";
+	setAttr ".ptag" -type "string" "";
+lockNode -l 1 ;
+createNode reference -n "planeRN";
+	setAttr ".ed" -type "dataReferenceEdits" 
+		"planeRN"
+		"planeRN" 0
+		"planeRN" 1
+		2 "|plane:complete" "translate" " -type \"double3\" -36.732299 6.52077 17.174738";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 select -ne :time1;
 	setAttr ".o" 1;
 	setAttr ".unw" 1;
 select -ne :renderPartition;
-	setAttr -s 57 ".st";
+	setAttr -s 92 ".st";
 select -ne :initialShadingGroup;
-	setAttr -s 16 ".dsm";
+	setAttr -s 32 ".dsm";
 	setAttr ".ro" yes;
-	setAttr -s 16 ".gn";
+	setAttr -s 37 ".gn";
 select -ne :initialParticleSE;
 	setAttr ".ro" yes;
 select -ne :defaultShaderList1;
-	setAttr -s 47 ".s";
+	setAttr -s 82 ".s";
 select -ne :defaultTextureList1;
-	setAttr -s 9 ".tx";
+	setAttr -s 25 ".tx";
 select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderUtilityList1;
-	setAttr -s 8 ".u";
+	setAttr -s 22 ".u";
 select -ne :defaultRenderingList1;
-	setAttr -s 5 ".r";
+	setAttr -s 11 ".r";
 select -ne :renderGlobalsList1;
 select -ne :defaultRenderGlobals;
 	setAttr ".ren" -type "string" "mentalRay";
