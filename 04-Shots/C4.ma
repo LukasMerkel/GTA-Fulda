@@ -1,6 +1,6 @@
 //Maya ASCII 2014 scene
-//Name: complete_scene.ma
-//Last modified: Sun, Dec 07, 2014 10:32:36 PM
+//Name: C4.ma
+//Last modified: Sun, Dec 07, 2014 09:10:05 PM
 //Codeset: 1252
 file -rdi 1 -ns "town" -rfn "townRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/town.mb";
 file -rdi 1 -ns "man_orange" -rfn "man_orangeRN" "C:/Users/Lukas/Desktop/GTA-Fulda/01-Models/man_orange.mb";
@@ -112,28 +112,28 @@ fileInfo "osv" "Microsoft Windows 7 Home Premium Edition, 64-bit Windows 7 Servi
 fileInfo "license" "student";
 createNode transform -s -n "persp";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 53.812737808756445 -0.73422760897143036 33.162897381901686 ;
-	setAttr ".r" -type "double3" -21.599999999997348 -86.799999999999557 0 ;
-	setAttr ".rp" -type "double3" -7.1054273576010019e-015 0 -1.7763568394002505e-015 ;
-	setAttr ".rpt" -type "double3" 6.552344295180335e-014 -7.3459480824526331e-014 6.7709825782051101e-015 ;
+	setAttr ".t" -type "double3" 41.064768195876816 3.6233187488314447 15.209816654254327 ;
+	setAttr ".r" -type "double3" -32.399999999997661 -32.399999999997561 3.7669661104390891e-015 ;
+	setAttr ".rpt" -type "double3" 6.6730203552235114e-014 -6.9028726653296382e-014 
+		1.1075421326254425e-014 ;
 createNode camera -s -n "perspShape" -p "persp";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999964;
-	setAttr ".coi" 1.055626317267192;
+	setAttr ".coi" 6.1079339782991182;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" 54.850912884605165 -0.81902925129009441 33.154524648286056 ;
+	setAttr ".tp" -type "double3" 43.803874160109295 0.87453491590309151 11.228566954259456 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 createNode transform -s -n "top";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 62.514820250180968 139.62161708785888 33.00051639490453 ;
+	setAttr ".t" -type "double3" 47.478706961014737 137.12685879855172 11.258923252710945 ;
 	setAttr ".r" -type "double3" -89.999999999999986 0 0 ;
 createNode camera -s -n "topShape" -p "top";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 13.052631578947368;
+	setAttr ".ow" 6.7467187543337301;
 	setAttr ".imn" -type "string" "top";
 	setAttr ".den" -type "string" "top_depth";
 	setAttr ".man" -type "string" "top_mask";
@@ -141,12 +141,12 @@ createNode camera -s -n "topShape" -p "top";
 	setAttr ".o" yes;
 createNode transform -s -n "front";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 62.514834187396026 -1.6757134189784486 144.1266438238552 ;
+	setAttr ".t" -type "double3" 47.474934743673955 1.3435599047870932 139.84537711181417 ;
 createNode camera -s -n "frontShape" -p "front";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 89.765349876805317;
+	setAttr ".ow" 1.4827688055809158;
 	setAttr ".imn" -type "string" "front";
 	setAttr ".den" -type "string" "front_depth";
 	setAttr ".man" -type "string" "front_mask";
@@ -154,13 +154,13 @@ createNode camera -s -n "frontShape" -p "front";
 	setAttr ".o" yes;
 createNode transform -s -n "side";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 121.92907039463981 -1.6757180347736207 33.000516988140518 ;
+	setAttr ".t" -type "double3" 103.12969305987096 1.489138272765159 6.070012159550835 ;
 	setAttr ".r" -type "double3" 0 89.999999999999986 0 ;
 createNode camera -s -n "sideShape" -p "side";
 	setAttr -k off ".v" no;
 	setAttr ".rnd" no;
 	setAttr ".coi" 100.1;
-	setAttr ".ow" 29.258373393107778;
+	setAttr ".ow" 31.592993087334388;
 	setAttr ".imn" -type "string" "side";
 	setAttr ".den" -type "string" "side_depth";
 	setAttr ".man" -type "string" "side_mask";
@@ -183,15 +183,15 @@ createNode pointLight -n "pointLightShape4" -p "pointLight4";
 	setAttr ".us" no;
 createNode lookAt -n "camera1_group";
 	setAttr ".a" -type "double3" 0 0 -1 ;
-	setAttr ".db" 1.317878020014307;
+	setAttr ".db" 6.6234446448847493;
 createNode transform -n "camera1" -p "camera1_group";
 createNode camera -n "cameraShape1" -p "camera1";
 	setAttr -k off ".v";
 	setAttr ".rnd" no;
 	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
 	setAttr ".ff" 0;
-	setAttr ".fd" 0.8971670692192818;
-	setAttr ".coi" 1.317878020014307;
+	setAttr ".fd" 6.2027336821075121;
+	setAttr ".coi" 6.6234446448847493;
 	setAttr ".ow" 30;
 	setAttr ".imn" -type "string" "camera1";
 	setAttr ".den" -type "string" "camera1_depth";
@@ -253,65 +253,6 @@ createNode transform -n "camera4_aim" -p "camera4_group";
 	setAttr ".drp" yes;
 createNode locator -n "camera4_aimShape" -p "camera4_aim";
 	setAttr -k off ".v" no;
-createNode lookAt -n "camera5_group";
-	setAttr ".a" -type "double3" 0 0 -1 ;
-	setAttr ".db" 14.587359353860911;
-	setAttr ".tws" -0.068196599542495989;
-createNode lookAt -n "camera6_group";
-	setAttr ".a" -type "double3" 0 0 -1 ;
-	setAttr ".db" 7.7981017596967241;
-createNode lookAt -n "camera7_group";
-	setAttr ".a" -type "double3" 0 0 -1 ;
-createNode transform -n "camera7" -p "camera7_group";
-	setAttr ".t" -type "double3" 54.732543530446961 -1.2142709724602372 33.148950274888477 ;
-createNode camera -n "cameraShape7" -p "camera7";
-	setAttr -k off ".v";
-	setAttr ".rnd" no;
-	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
-	setAttr ".ff" 0;
-	setAttr ".ow" 30;
-	setAttr ".imn" -type "string" "camera7";
-	setAttr ".den" -type "string" "camera7_depth";
-	setAttr ".man" -type "string" "camera7_mask";
-createNode transform -n "camera7_aim" -p "camera7_group";
-	setAttr ".t" -type "double3" 62.514820250180968 -1.6757176377401115 33.000516394904501 ;
-	setAttr ".drp" yes;
-createNode locator -n "camera7_aimShape" -p "camera7_aim";
-	setAttr -k off ".v" no;
-createNode lookAt -n "camera8_group";
-	setAttr ".a" -type "double3" 0 0 -1 ;
-createNode transform -n "camera8" -p "camera8_group";
-createNode camera -n "cameraShape8" -p "camera8";
-	setAttr -k off ".v";
-	setAttr ".rnd" no;
-	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
-	setAttr ".ff" 0;
-	setAttr ".ow" 30;
-	setAttr ".imn" -type "string" "camera8";
-	setAttr ".den" -type "string" "camera8_depth";
-	setAttr ".man" -type "string" "camera8_mask";
-createNode transform -n "camera8_aim" -p "camera8_group";
-	setAttr ".t" -type "double3" 0 0 -5 ;
-	setAttr ".drp" yes;
-createNode locator -n "camera8_aimShape" -p "camera8_aim";
-	setAttr -k off ".v" no;
-createNode lookAt -n "camera9_group";
-	setAttr ".a" -type "double3" 0 0 -1 ;
-createNode transform -n "camera9" -p "camera9_group";
-createNode camera -n "cameraShape9" -p "camera9";
-	setAttr -k off ".v";
-	setAttr ".rnd" no;
-	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
-	setAttr ".ff" 0;
-	setAttr ".ow" 30;
-	setAttr ".imn" -type "string" "camera9";
-	setAttr ".den" -type "string" "camera9_depth";
-	setAttr ".man" -type "string" "camera9_mask";
-createNode transform -n "camera9_aim" -p "camera9_group";
-	setAttr ".t" -type "double3" 0 0 -5 ;
-	setAttr ".drp" yes;
-createNode locator -n "camera9_aimShape" -p "camera9_aim";
-	setAttr -k off ".v" no;
 createNode fosterParent -n "man_orangeRNfosterParent1";
 createNode transform -n "camera3_aim" -p "man_orangeRNfosterParent1";
 	setAttr ".t" -type "double3" 0.87173451616692432 1.4446863875563494 0.30831447871587514 ;
@@ -339,46 +280,6 @@ createNode transform -n "camera2_aim" -p "carRNfosterParent1";
 	setAttr ".drp" yes;
 createNode locator -n "camera2_aimShape" -p "camera2_aim";
 	setAttr -k off ".v" no;
-createNode transform -n "camera5_aim" -p "carRNfosterParent1";
-	setAttr ".t" -type "double3" -19.649874735057253 4.3172137655661595 -1.6374262054752402 ;
-	setAttr ".r" -type "double3" 0 179.54502945645424 0 ;
-	setAttr ".s" -type "double3" 2.4768231275836361 2.4768231275836361 2.4768231275836361 ;
-	setAttr ".drp" yes;
-createNode locator -n "camera5_aimShape" -p "camera5_aim";
-	setAttr -k off ".v" no;
-createNode transform -n "camera5" -p "carRNfosterParent1";
-	setAttr ".t" -type "double3" -33.857439444863402 7.5863189332403298 -1.1383176621398825 ;
-	setAttr ".s" -type "double3" 2.4768231275836361 2.4768231275836361 2.4768231275836357 ;
-createNode camera -n "cameraShape5" -p "camera5";
-	setAttr -k off ".v";
-	setAttr ".rnd" no;
-	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
-	setAttr ".ff" 0;
-	setAttr ".coi" 14.587359353860911;
-	setAttr ".ow" 30;
-	setAttr ".imn" -type "string" "camera5";
-	setAttr ".den" -type "string" "camera5_depth";
-	setAttr ".man" -type "string" "camera5_mask";
-createNode fosterParent -n "police_blueRNfosterParent1";
-createNode transform -n "camera6_aim" -p "police_blueRNfosterParent1";
-	setAttr ".t" -type "double3" -0.95040346588233138 1.3004936186081892 1.3669375063304443 ;
-	setAttr ".r" -type "double3" 0 89.521700609743831 0 ;
-	setAttr ".s" -type "double3" 0.99999999999999989 1 0.99999999999999989 ;
-	setAttr ".drp" yes;
-createNode locator -n "camera6_aimShape" -p "camera6_aim";
-	setAttr -k off ".v" no;
-createNode transform -n "camera6" -p "police_blueRNfosterParent1";
-	setAttr ".t" -type "double3" -0.86739826227974237 1.7607903477501106 9.1509999490335652 ;
-createNode camera -n "cameraShape6" -p "camera6";
-	setAttr -k off ".v";
-	setAttr ".rnd" no;
-	setAttr ".cap" -type "double2" 1.41732 0.94488 ;
-	setAttr ".ff" 0;
-	setAttr ".coi" 7.7981017596967241;
-	setAttr ".ow" 30;
-	setAttr ".imn" -type "string" "camera6";
-	setAttr ".den" -type "string" "camera6_depth";
-	setAttr ".man" -type "string" "camera6_mask";
 createNode lightLinker -s -n "lightLinker1";
 	setAttr -s 98 ".lnk";
 	setAttr -s 98 ".slnk";
@@ -443,14 +344,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynRelEdPanel\" (localizedPanelLabel(\"Dynamic Relationships\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynRelEdPanel\" -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dynamic Relationships\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"relationshipPanel\" (localizedPanelLabel(\"Relationship Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"relationshipPanel\" -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"referenceEditorPanel\" -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"componentEditorPanel\" -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"dynPaintScriptedPanelType\" -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"scriptEditorPanel\" -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels `;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"Stereo\" (localizedPanelLabel(\"Stereo\")) `;\n\tif (\"\" == $panelName) {\n\t\tif ($useSceneConfig) {\n\t\t\t$panelName = `scriptedPanel -unParent  -type \"Stereo\" -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels `;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"cameraShape1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n"
-		+ "                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n"
-		+ "                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n"
-		+ "                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\t}\n\t} else {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Stereo\")) -mbv $menusOkayInPanels  $panelName;\nstring $editorName = ($panelName+\"Editor\");\n            stereoCameraView -e \n                -camera \"cameraShape1\" \n                -useInteractiveMode 0\n                -displayLights \"default\" \n                -displayAppearance \"wireframe\" \n                -activeOnly 0\n                -ignorePanZoom 0\n                -wireframeOnShaded 0\n                -headsUpDisplay 1\n"
-		+ "                -selectionHiliteDisplay 1\n                -useDefaultMaterial 0\n                -bufferMode \"double\" \n                -twoSidedLighting 1\n                -backfaceCulling 0\n                -xray 0\n                -jointXray 0\n                -activeComponentsXray 0\n                -displayTextures 0\n                -smoothWireframe 0\n                -lineWidth 1\n                -textureAnisotropic 0\n                -textureHilight 1\n                -textureSampling 2\n                -textureDisplay \"modulate\" \n                -textureMaxSize 16384\n                -fogging 0\n                -fogSource \"fragment\" \n                -fogMode \"linear\" \n                -fogStart 0\n                -fogEnd 100\n                -fogDensity 0.1\n                -fogColor 0.5 0.5 0.5 1 \n                -maxConstantTransparency 1\n                -objectFilterShowInHUD 1\n                -isFiltered 0\n                -colorResolution 4 4 \n                -bumpResolution 4 4 \n                -textureCompression 0\n"
-		+ "                -transparencyAlgorithm \"frontAndBackCull\" \n                -transpInShadows 0\n                -cullingOverride \"none\" \n                -lowQualityLighting 0\n                -maximumNumHardwareLights 0\n                -occlusionCulling 0\n                -shadingModel 0\n                -useBaseRenderer 0\n                -useReducedRenderer 0\n                -smallObjectCulling 0\n                -smallObjectThreshold -1 \n                -interactiveDisableShadows 0\n                -interactiveBackFaceCull 0\n                -sortTransparent 1\n                -nurbsCurves 1\n                -nurbsSurfaces 1\n                -polymeshes 1\n                -subdivSurfaces 1\n                -planes 1\n                -lights 1\n                -cameras 1\n                -controlVertices 1\n                -hulls 1\n                -grid 1\n                -imagePlane 1\n                -joints 1\n                -ikHandles 1\n                -deformers 1\n                -dynamics 1\n                -fluids 1\n                -hairSystems 1\n"
-		+ "                -follicles 1\n                -nCloths 1\n                -nParticles 1\n                -nRigids 1\n                -dynamicConstraints 1\n                -locators 1\n                -manipulators 1\n                -pluginShapes 1\n                -dimensions 1\n                -handles 1\n                -pivots 1\n                -textures 1\n                -strokes 1\n                -motionTrails 1\n                -clipGhosts 1\n                -greasePencils 1\n                -shadows 0\n                -displayMode \"centerEye\" \n                -viewColor 0 0 0 1 \n                -useCustomBackground 1\n                $editorName;\n            stereoCameraView -e -viewSelected 0 $editorName;\n            stereoCameraView -e \n                -pluginObjects \"gpuCacheDisplayFilter\" 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n"
-		+ "\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
+		+ "\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-defaultImage \"\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap false\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
 		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"all\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 1\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 0\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -maxConstantTransparency 1\\n    -rendererName \\\"base_OpenGL_Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        setFocus `paneLayout -q -p1 $gMainPane`;\n        sceneUIReplacement -deleteRemaining;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
@@ -667,12 +561,13 @@ createNode reference -n "man_orangeRN";
 		0 "|man_orangeRNfosterParent1|camera3" "|man_orange:complete" "-s -r "
 		0 "|man_orangeRNfosterParent1|camera3_aim" "|man_orange:complete" "-s -r "
 		
-		2 "|man_orange:complete" "translate" " -type \"double3\" 46.57402 0.0552411 11.651519"
+		2 "|man_orange:complete" "translate" " -type \"double3\" 42.975397 -0.365761 11.827882"
 		
 		2 "|man_orange:complete" "translateX" " -av"
 		2 "|man_orange:complete" "translateY" " -av"
 		2 "|man_orange:complete" "translateZ" " -av"
-		2 "|man_orange:complete" "rotate" " -type \"double3\" 0 1.071859 0"
+		2 "|man_orange:complete" "rotate" " -type \"double3\" -176.21891 -199.946983 -179.124484"
+		
 		2 "|man_orange:complete" "rotateX" " -av"
 		2 "|man_orange:complete" "rotateY" " -av"
 		2 "|man_orange:complete" "rotateZ" " -av"
@@ -682,10 +577,10 @@ createNode reference -n "man_orangeRN";
 		
 		2 "|man_orange:complete" "scalePivot" " -type \"double3\" 0.893539 1.206562 0.048581"
 		
-		2 "|man_orange:lieder" "translate" " -type \"double3\" 46.571101 0.0316515 11.60507"
+		2 "|man_orange:lieder" "translate" " -type \"double3\" 46.571101 -1.645006 11.60507"
 		
 		2 "|man_orange:lieder" "translateY" " -av"
-		2 "|man_orange:lieder" "rotate" " -type \"double3\" -86.343029 1.071859 -2.805658"
+		2 "|man_orange:lieder" "rotate" " -type \"double3\" -2.29895 1.071859 -2.805658"
 		
 		2 "|man_orange:lieder" "rotateX" " -av"
 		2 "|man_orange:lieder" "rotateY" " -av"
@@ -750,19 +645,12 @@ createNode reference -n "carRN";
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"carRN"
 		"carRN" 0
-		"carRN" 18
-		0 "|carRNfosterParent1|camera5" "|car:complete" "-s -r "
-		0 "|carRNfosterParent1|camera5_aim" "|car:complete" "-s -r "
+		"carRN" 11
 		0 "|carRNfosterParent1|camera2_aim" "|car:complete" "-s -r "
-		2 "|car:complete" "translate" " -type \"double3\" 54.895081 0.0978067 5.10449"
+		2 "|car:complete" "translate" " -type \"double3\" 38.908649 0.0978067 7.772299"
 		
 		2 "|car:complete" "translateX" " -av"
-		2 "|car:complete" "translateY" " -av"
 		2 "|car:complete" "translateZ" " -av"
-		2 "|car:complete" "rotate" " -type \"double3\" 0 -179.545029 0"
-		2 "|car:complete" "rotateX" " -av"
-		2 "|car:complete" "rotateY" " -av"
-		2 "|car:complete" "rotateZ" " -av"
 		2 "|car:complete" "scale" " -type \"double3\" 0.403743 0.403743 0.403743"
 		
 		5 4 "carRN" "|car:complete.translateX" "carRN.placeHolderList[1]" ""
@@ -781,35 +669,20 @@ createNode reference -n "car2RN";
 		"car2RN"
 		"car2RN" 0
 		"car2RN" 3
-		2 "|car2:complete" "translate" " -type \"double3\" -24.175126 0.423556 42.121164"
+		2 "|car2:complete" "translate" " -type \"double3\" -24.175126 0.423556 13.198031"
 		
 		2 "|car2:complete" "rotate" " -type \"double3\" 0 -35.332237 0"
 		2 "|car2:complete" "scale" " -type \"double3\" 0.411387 0.411387 0.411387";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "police_blueRN";
-	setAttr -s 3 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"police_blueRN"
 		"police_blueRN" 0
-		"police_blueRN" 9
-		0 "|police_blueRNfosterParent1|camera6" "|police_blue:complete" "-s -r "
-		0 "|police_blueRNfosterParent1|camera6_aim" "|police_blue:complete" "-s -r "
+		"police_blueRN" 2
+		2 "|police_blue:complete" "translate" " -type \"double3\" -36.630613 1.113751 24.88633"
 		
-		2 "|police_blue:complete" "translate" " -type \"double3\" 63.889644 -2.976211 33.939476"
-		
-		2 "|police_blue:complete" "translateY" " -av"
-		2 "|police_blue:complete" "translateZ" " -av"
-		2 "|police_blue:complete" "rotate" " -type \"double3\" 0 -89.521701 0"
-		5 4 "police_blueRN" "|police_blue:complete.translateX" "police_blueRN.placeHolderList[1]" 
-		""
-		5 4 "police_blueRN" "|police_blue:complete.translateY" "police_blueRN.placeHolderList[2]" 
-		""
-		5 4 "police_blueRN" "|police_blue:complete.translateZ" "police_blueRN.placeHolderList[3]" 
-		"";
+		2 "|police_blue:complete" "rotate" " -type \"double3\" 0 -119.405563 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "police_redRN";
@@ -817,7 +690,7 @@ createNode reference -n "police_redRN";
 		"police_redRN"
 		"police_redRN" 0
 		"police_redRN" 2
-		2 "|police_red:complete" "translate" " -type \"double3\" -39.747168 1.114 53.294567"
+		2 "|police_red:complete" "translate" " -type \"double3\" -39.747168 1.114 16.575567"
 		
 		2 "|police_red:complete" "rotate" " -type \"double3\" 0 109.244882 0";
 	setAttr ".ptag" -type "string" "";
@@ -827,10 +700,10 @@ createNode reference -n "tankRN";
 		"tankRN"
 		"tankRN" 0
 		"tankRN" 4
-		2 "|tank:ball" "translate" " -type \"double3\" -39.768657 4.144796 49.727799"
+		2 "|tank:ball" "translate" " -type \"double3\" -39.768657 4.144796 13.008799"
 		
 		2 "|tank:ball" "rotate" " -type \"double3\" 0 0 0"
-		2 "|tank:complete" "translate" " -type \"double3\" -34.88923 0.528192 42.890471"
+		2 "|tank:complete" "translate" " -type \"double3\" -34.88923 0.528192 6.171471"
 		
 		2 "|tank:complete" "rotate" " -type \"double3\" 0 52.936703 0";
 	setAttr ".ptag" -type "string" "";
@@ -847,11 +720,11 @@ createNode reference -n "womanRN";
 		"womanRN"
 		"womanRN" 0
 		"womanRN" 36
-		2 "|woman:complete" "translate" " -type \"double3\" 42.866515 -1.52934 11.201071"
+		2 "|woman:complete" "translate" " -type \"double3\" 38.159216 0.540152 11.201071"
 		
 		2 "|woman:complete" "translateX" " -av"
 		2 "|woman:complete" "translateY" " -av"
-		2 "|woman:complete" "rotate" " -type \"double3\" -21.417886 11.920661 27.77073"
+		2 "|woman:complete" "rotate" " -type \"double3\" -137.703446 72.009002 -48.124734"
 		
 		2 "|woman:complete" "rotateX" " -av"
 		2 "|woman:complete" "rotateY" " -av"
@@ -955,38 +828,13 @@ createNode reference -n "womanRN";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "man_greenRN";
-	setAttr -s 6 ".phl";
-	setAttr ".phl[1]" 0;
-	setAttr ".phl[2]" 0;
-	setAttr ".phl[3]" 0;
-	setAttr ".phl[4]" 0;
-	setAttr ".phl[5]" 0;
-	setAttr ".phl[6]" 0;
 	setAttr ".ed" -type "dataReferenceEdits" 
 		"man_greenRN"
 		"man_greenRN" 0
-		"man_greenRN" 13
-		2 "|man_green:complete" "translate" " -type \"double3\" -41.460524 0.423382 1.937502"
+		"man_greenRN" 2
+		2 "|man_green:complete" "translate" " -type \"double3\" -27.268789 0.0541284 21.805944"
 		
-		2 "|man_green:complete" "translateX" " -av"
-		2 "|man_green:complete" "translateY" " -av"
-		2 "|man_green:complete" "rotate" " -type \"double3\" -106.361235 -73.654759 87.01874"
-		
-		2 "|man_green:complete" "rotateX" " -av"
-		2 "|man_green:complete" "rotateY" " -av"
-		2 "|man_green:complete" "rotateZ" " -av"
-		5 4 "man_greenRN" "|man_green:complete.translateX" "man_greenRN.placeHolderList[1]" 
-		""
-		5 4 "man_greenRN" "|man_green:complete.translateY" "man_greenRN.placeHolderList[2]" 
-		""
-		5 4 "man_greenRN" "|man_green:complete.translateZ" "man_greenRN.placeHolderList[3]" 
-		""
-		5 4 "man_greenRN" "|man_green:complete.rotateX" "man_greenRN.placeHolderList[4]" 
-		""
-		5 4 "man_greenRN" "|man_green:complete.rotateY" "man_greenRN.placeHolderList[5]" 
-		""
-		5 4 "man_greenRN" "|man_green:complete.rotateZ" "man_greenRN.placeHolderList[6]" 
-		"";
+		2 "|man_green:complete" "rotate" " -type \"double3\" 0 -120.064294 0";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode reference -n "planeRN";
@@ -994,7 +842,7 @@ createNode reference -n "planeRN";
 		"planeRN"
 		"planeRN" 0
 		"planeRN" 1
-		2 "|plane:complete" "translate" " -type \"double3\" -36.732299 6.52077 53.893738";
+		2 "|plane:complete" "translate" " -type \"double3\" -36.732299 6.52077 17.174738";
 	setAttr ".ptag" -type "string" "";
 lockNode -l 1 ;
 createNode mentalrayOptions -s -n "miContourPreset";
@@ -1039,58 +887,30 @@ createNode animCurveTA -n "lieder_rotateZ";
 createNode animCurveTL -n "complete_translateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 25 ".ktv[0:24]"  1 54.89508109608267 148 54.772119353269005
-		 153 50.82540007402735 190 42.200731601162865 220 38.908648828684342 550 38.908648828684342
-		 555 28.363396239612843 557 21.863110921442971 560 17.82574015787754 563 10.866192851301919
-		 566 8.184988429430458 567 5.8256799321867314 620 -36.306796254235287 621 -38.09624868985032
-		 623 -38.09624868985032 625 -39.79477726058014 627 -39.79477726058014 630 -34.479257414554674
-		 633 -24.542041672871065 634 -22.88941615192963 750 54.19547716450198 755 57.742189386900307
-		 757 57.742189386900307 760 58.440252134749954 800 58.440252134749954;
+	setAttr -s 5 ".ktv[0:4]"  1 54.89508109608267 148 54.772119353269005
+		 153 50.82540007402735 190 42.200731601162865 220 38.908648828684342;
 createNode animCurveTL -n "complete_translateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 25 ".ktv[0:24]"  1 0.097806717224004747 148 0.097806717224004747
-		 153 0.097806717224004747 190 0.097806717224004747 220 0.097806717224004747 550 0.097806717224004747
-		 555 0.097806717224004747 557 0.097806717224004747 560 0.097806717224004747 563 0.097806717224004747
-		 566 0.097806717224004747 567 0.097806717224004747 620 0.097806717224004747 621 0.097806717224004747
-		 623 0.74784267987804065 625 0.74784267987804065 627 0.74784267987804065 630 0.74784267987804065
-		 633 0.74784267987804065 634 0.74784267987804065 750 0.74784267987804065 755 0.74784267987804065
-		 757 0.74784267987804065 760 0.74784267987804065 800 0.74784267987804065;
+	setAttr -s 5 ".ktv[0:4]"  1 0.097806717224004747 148 0.097806717224004747
+		 153 0.097806717224004747 190 0.097806717224004747 220 0.097806717224004747;
 createNode animCurveTL -n "complete_translateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 25 ".ktv[0:24]"  1 5.1044899643141015 148 5.1044899643141015
-		 153 5.1044899643141015 190 7.7722986546497825 220 7.7722986546497825 550 7.7722986546497825
-		 555 7.7722986546497825 557 7.7722986546497825 560 5.091644178033941 563 8.1295994955106217
-		 566 6.1813056284248855 567 5.1892900466718199 620 5.091644178033941 621 5.091644178033941
-		 623 5.091644178033941 625 2.3106625904686 627 -2.1975904379230302 630 -8.4315877497823841
-		 633 -8.4315877497823841 634 -8.4315877497823841 750 -8.4315877497823859 755 -6.018617940341163
-		 757 -2.9203000923645899 760 -0.43961630269413637 800 32.373473668543582;
+	setAttr -s 5 ".ktv[0:4]"  1 5.1044899643141015 148 5.1044899643141015
+		 153 5.1044899643141015 190 7.7722986546497825 220 7.7722986546497825;
 createNode animCurveTA -n "complete_rotateX";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 21 ".ktv[0:20]"  220 0 555 0 557 0 560 0 562 0 563 0 565 0
-		 567 0 620 0 621 174.27572940236689 623 173.45274515500626 625 169.17802281430727
-		 627 127.20442143977797 628 66.939911601322734 630 2.3099977419798874 633 1.2330483951838045
-		 634 1.2071709802458064 751 1.2991169225457453 755 1.7772094041238948 757 3.5842345435996377
-		 760 -99.847876575465904;
+	setAttr ".ktv[0]"  220 0;
 createNode animCurveTA -n "complete_rotateY";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 21 ".ktv[0:20]"  220 -179.54502945645424 555 -179.54502945645424
-		 557 -191.66223149531496 560 -177.87296623512086 562 -163.89491498037037 563 -163.90723799582616
-		 565 -184.72676829594727 567 -178.88477277804245 620 -177.87296623512086 621 -3.4534773531002982
-		 623 29.171915797333863 625 57.977148374777443 627 84.984707873890116 628 80.859184650666862
-		 630 58.491801863082195 633 -11.793730308855718 634 -0.92231470530388526 751 -21.702760794958884
-		 755 -47.217161784649008 757 -70.308755055799665 760 -91.225068225816955;
+	setAttr ".ktv[0]"  220 -179.54502945645424;
 createNode animCurveTA -n "complete_rotateZ";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
-	setAttr -s 21 ".ktv[0:20]"  220 0 555 0 557 0 560 0 562 0 563 0 565 0
-		 567 0 620 0 621 179.86467635683621 623 176.31674386833569 625 170.31279702483556
-		 627 126.92080466704429 628 41.056989812216578 630 2.7144299644162286 633 0.49265565449617466
-		 634 0.72528000872581089 751 0.26424088267809825 755 -0.55983185035596528 757 -2.6304209712492472
-		 760 100.59479836554368;
+	setAttr ".ktv[0]"  220 0;
 createNode animCurveTL -n "complete_translateX1";
 	setAttr ".tan" 18;
 	setAttr ".wgt" no;
@@ -1170,51 +990,9 @@ createNode animCurveTA -n "complete_rotateZ2";
 	setAttr ".wgt" no;
 	setAttr -s 3 ".ktv[0:2]"  297 27.770729554899923 304 -48.124734175709378
 		 310 -48.124734175709563;
-createNode animCurveTL -n "complete_translateX3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 -41.460524162305461 626 -41.460524162305461
-		 627 -41.460524162305461 628 -40.842450314684349 629 -40.842450314684349 630 -40.842450314684349;
-createNode animCurveTL -n "complete_translateY3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 0.42338196361272695 626 0.42338196361272695
-		 627 1.6582539168636643 628 2.0038779435283312 629 2.2168979100208515 630 2.8435743398482094;
-createNode animCurveTL -n "complete_translateZ3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 6 ".ktv[0:5]"  1 1.9375018637796553 626 1.9375018637796553
-		 627 1.9375018637796553 628 1.9375018637796553 629 1.9375018637796553 630 1.9375018637796553;
-createNode animCurveTA -n "complete_rotateX3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  627 -106.36123504342991 628 -97.589070442149648;
-createNode animCurveTA -n "complete_rotateY3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  627 -73.654759109864244 628 -53.111261241940049;
-createNode animCurveTA -n "complete_rotateZ3";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 2 ".ktv[0:1]"  627 87.018740267800396 628 77.36794572943252;
-createNode animCurveTL -n "complete_translateX4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 63.88964400224377 325 63.88964400224377
-		 326 63.88964400224377 355 63.88964400224377 356 63.88964400224377;
-createNode animCurveTL -n "complete_translateY4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -2.9762112571408208 325 -2.9762112571408208
-		 326 0.8305538587721033 355 0.8305538587721033 356 -3.2511100615851332;
-createNode animCurveTL -n "complete_translateZ4";
-	setAttr ".tan" 18;
-	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 33.939475823562262 325 33.939475823562262
-		 326 33.939475823562262 355 17.498125967078636 356 17.498125967078636;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 370;
+	setAttr ".unw" 370;
 select -ne :renderPartition;
 	setAttr -s 98 ".st";
 select -ne :initialShadingGroup;
@@ -1257,8 +1035,6 @@ select -ne :hardwareRenderingGlobals;
 select -ne :defaultHardwareRenderGlobals;
 	setAttr ".fn" -type "string" "im";
 	setAttr ".res" -type "string" "ntsc_4d 646 485 1.333";
-select -ne :ikSystem;
-	setAttr -s 4 ".sol";
 connectAttr "complete_translateX1.o" "man_orangeRN.phl[1]";
 connectAttr "complete_translateY1.o" "man_orangeRN.phl[2]";
 connectAttr "complete_translateZ1.o" "man_orangeRN.phl[3]";
@@ -1277,21 +1053,12 @@ connectAttr "complete_translateZ.o" "carRN.phl[3]";
 connectAttr "complete_rotateX.o" "carRN.phl[4]";
 connectAttr "complete_rotateY.o" "carRN.phl[5]";
 connectAttr "complete_rotateZ.o" "carRN.phl[6]";
-connectAttr "complete_translateX4.o" "police_blueRN.phl[1]";
-connectAttr "complete_translateY4.o" "police_blueRN.phl[2]";
-connectAttr "complete_translateZ4.o" "police_blueRN.phl[3]";
 connectAttr "complete_translateX2.o" "womanRN.phl[1]";
 connectAttr "complete_translateY2.o" "womanRN.phl[2]";
 connectAttr "complete_translateZ2.o" "womanRN.phl[3]";
 connectAttr "complete_rotateX2.o" "womanRN.phl[4]";
 connectAttr "complete_rotateY2.o" "womanRN.phl[5]";
 connectAttr "complete_rotateZ2.o" "womanRN.phl[6]";
-connectAttr "complete_translateX3.o" "man_greenRN.phl[1]";
-connectAttr "complete_translateY3.o" "man_greenRN.phl[2]";
-connectAttr "complete_translateZ3.o" "man_greenRN.phl[3]";
-connectAttr "complete_rotateX3.o" "man_greenRN.phl[4]";
-connectAttr "complete_rotateY3.o" "man_greenRN.phl[5]";
-connectAttr "complete_rotateZ3.o" "man_greenRN.phl[6]";
 connectAttr "camera1_aim.tx" "camera1_group.tg[0].ttx";
 connectAttr "camera1_aim.ty" "camera1_group.tg[0].tty";
 connectAttr "camera1_aim.tz" "camera1_group.tg[0].ttz";
@@ -1350,80 +1117,10 @@ connectAttr "camera4_group.crx" "camera4.rx";
 connectAttr "camera4_group.cry" "camera4.ry";
 connectAttr "camera4_group.crz" "camera4.rz";
 connectAttr "camera4_group.db" "cameraShape4.coi";
-connectAttr "camera5_aim.tx" "camera5_group.tg[0].ttx";
-connectAttr "camera5_aim.ty" "camera5_group.tg[0].tty";
-connectAttr "camera5_aim.tz" "camera5_group.tg[0].ttz";
-connectAttr "camera5_aim.rp" "camera5_group.tg[0].trp";
-connectAttr "camera5_aim.rpt" "camera5_group.tg[0].trt";
-connectAttr "camera5_aim.pm" "camera5_group.tg[0].tpm";
-connectAttr "camera5.pim" "camera5_group.cpim";
-connectAttr "camera5.t" "camera5_group.ct";
-connectAttr "camera5.rp" "camera5_group.crp";
-connectAttr "camera5.rpt" "camera5_group.crt";
-connectAttr "camera6_aim.tx" "camera6_group.tg[0].ttx";
-connectAttr "camera6_aim.ty" "camera6_group.tg[0].tty";
-connectAttr "camera6_aim.tz" "camera6_group.tg[0].ttz";
-connectAttr "camera6_aim.rp" "camera6_group.tg[0].trp";
-connectAttr "camera6_aim.rpt" "camera6_group.tg[0].trt";
-connectAttr "camera6_aim.pm" "camera6_group.tg[0].tpm";
-connectAttr "camera6.pim" "camera6_group.cpim";
-connectAttr "camera6.t" "camera6_group.ct";
-connectAttr "camera6.rp" "camera6_group.crp";
-connectAttr "camera6.rpt" "camera6_group.crt";
-connectAttr "camera7_aim.tx" "camera7_group.tg[0].ttx";
-connectAttr "camera7_aim.ty" "camera7_group.tg[0].tty";
-connectAttr "camera7_aim.tz" "camera7_group.tg[0].ttz";
-connectAttr "camera7_aim.rp" "camera7_group.tg[0].trp";
-connectAttr "camera7_aim.rpt" "camera7_group.tg[0].trt";
-connectAttr "camera7_aim.pm" "camera7_group.tg[0].tpm";
-connectAttr "camera7.pim" "camera7_group.cpim";
-connectAttr "camera7.t" "camera7_group.ct";
-connectAttr "camera7.rp" "camera7_group.crp";
-connectAttr "camera7.rpt" "camera7_group.crt";
-connectAttr "camera7_group.crx" "camera7.rx";
-connectAttr "camera7_group.cry" "camera7.ry";
-connectAttr "camera7_group.crz" "camera7.rz";
-connectAttr "camera7_group.db" "cameraShape7.coi";
-connectAttr "camera8_aim.tx" "camera8_group.tg[0].ttx";
-connectAttr "camera8_aim.ty" "camera8_group.tg[0].tty";
-connectAttr "camera8_aim.tz" "camera8_group.tg[0].ttz";
-connectAttr "camera8_aim.rp" "camera8_group.tg[0].trp";
-connectAttr "camera8_aim.rpt" "camera8_group.tg[0].trt";
-connectAttr "camera8_aim.pm" "camera8_group.tg[0].tpm";
-connectAttr "camera8.pim" "camera8_group.cpim";
-connectAttr "camera8.t" "camera8_group.ct";
-connectAttr "camera8.rp" "camera8_group.crp";
-connectAttr "camera8.rpt" "camera8_group.crt";
-connectAttr "camera8_group.crx" "camera8.rx";
-connectAttr "camera8_group.cry" "camera8.ry";
-connectAttr "camera8_group.crz" "camera8.rz";
-connectAttr "camera8_group.db" "cameraShape8.coi";
-connectAttr "camera9_aim.tx" "camera9_group.tg[0].ttx";
-connectAttr "camera9_aim.ty" "camera9_group.tg[0].tty";
-connectAttr "camera9_aim.tz" "camera9_group.tg[0].ttz";
-connectAttr "camera9_aim.rp" "camera9_group.tg[0].trp";
-connectAttr "camera9_aim.rpt" "camera9_group.tg[0].trt";
-connectAttr "camera9_aim.pm" "camera9_group.tg[0].tpm";
-connectAttr "camera9.pim" "camera9_group.cpim";
-connectAttr "camera9.t" "camera9_group.ct";
-connectAttr "camera9.rp" "camera9_group.crp";
-connectAttr "camera9.rpt" "camera9_group.crt";
-connectAttr "camera9_group.crx" "camera9.rx";
-connectAttr "camera9_group.cry" "camera9.ry";
-connectAttr "camera9_group.crz" "camera9.rz";
-connectAttr "camera9_group.db" "cameraShape9.coi";
 connectAttr "camera3_group.crx" "camera3.rx";
 connectAttr "camera3_group.cry" "camera3.ry";
 connectAttr "camera3_group.crz" "camera3.rz";
 connectAttr "camera3_group.db" "cameraShape3.coi";
-connectAttr "camera5_group.crx" "camera5.rx";
-connectAttr "camera5_group.cry" "camera5.ry";
-connectAttr "camera5_group.crz" "camera5.rz";
-connectAttr "camera5_group.db" "cameraShape5.coi";
-connectAttr "camera6_group.crx" "camera6.rx";
-connectAttr "camera6_group.cry" "camera6.ry";
-connectAttr "camera6_group.crz" "camera6.rz";
-connectAttr "camera6_group.db" "cameraShape6.coi";
 relationship "link" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
 relationship "link" ":lightLinker1" ":initialParticleSE.message" ":defaultLightSet.message";
 relationship "shadowLink" ":lightLinker1" ":initialShadingGroup.message" ":defaultLightSet.message";
@@ -1433,11 +1130,10 @@ connectAttr "renderLayerManager.rlmi[0]" "defaultRenderLayer.rlid";
 connectAttr ":miContourPreset.msg" ":mentalrayItemsList.opt" -na;
 connectAttr "man_orangeRNfosterParent1.msg" "man_orangeRN.fp";
 connectAttr "carRNfosterParent1.msg" "carRN.fp";
-connectAttr "police_blueRNfosterParent1.msg" "police_blueRN.fp";
 connectAttr "pointLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "pointLightShape4.ltd" ":lightList1.l" -na;
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr ":perspShape.msg" ":defaultRenderGlobals.sc";
 connectAttr "pointLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "pointLight4.iog" ":defaultLightSet.dsm" -na;
-// End of complete_scene.ma
+// End of C4.ma
